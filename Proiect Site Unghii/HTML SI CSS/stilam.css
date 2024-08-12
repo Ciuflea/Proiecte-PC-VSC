@@ -1,0 +1,130 @@
+    /* Resetează stilurile implicite pentru toate elementele */
+* {
+    margin: 0; /* Elimină marginile implicite ale elementelor */
+    padding: 0; /* Elimină padding-ul implicit */
+    font-family: sans-serif; /* Setează fontul implicit la sans-serif pentru toate elementele */
+    box-sizing: border-box; /* Include padding-ul și bordura în dimensiunile elementului */
+}
+
+/* Stiluri pentru containerul banner */
+.banner {
+    width: 100%; /* Setează lățimea bannerului la 100% din lățimea containerului părinte */
+    height: 100vh; /* Setează înălțimea bannerului la 100% din înălțimea vizibilă a viewportului */ /* Setează culoarea de fundal a bannerului la gri */
+    position: relative; /* Important pentru poziționarea absolută a videoclipului în interiorul bannerului */
+    overflow: hidden; /* Asigură-te că orice conținut depășit este ascuns */
+}
+
+/* Stiluri pentru video în fundal */
+.banner video {
+    position: absolute; /* Poziționează videoclipul absolut în raport cu bannerul */
+    top: 0; /* Poziționează videoclipul la partea de sus a bannerului */
+    left: 0; /* Poziționează videoclipul la partea stângă a bannerului */
+    width: 100%; /* Setează lățimea videoclipului la 100% din lățimea bannerului */
+    height: 100%; /* Setează înălțimea videoclipului la 100% din înălțimea bannerului */
+    object-fit: cover; /* Asigură-te că videoclipul acoperă întregul container fără a distorsiona aspectul */
+    z-index: -1;
+    filter: brightness(0.4); /* Plasează videoclipul în fundal */
+}
+
+/* Stiluri pentru navbar */
+.navbar {
+    width: 90%; /* Setează lățimea navbarului la 90% din lățimea containerului părinte */
+    padding: 30px; /* Adaugă padding de 30px în jurul conținutului navbarului */
+    margin: auto; /* Centrează navbarul orizontal în containerul părinte */
+    display: flex; /* Folosește Flexbox pentru a aranja elementele interne */
+    align-items: center; /* Aliniază vertical elementele interne la centru */
+    justify-content: space-between; /* Distribuie spațiul între elementele interne */
+}
+
+/* Stiluri pentru logo */
+.logo {
+    width: 180px; /* Setează lățimea logo-ului la 180px */
+    margin-top: -10px; /* Împinge logo-ul cu 10px în sus */
+    margin-left: -90px; /* Împinge logo-ul cu 90px spre stânga */
+    cursor: pointer; /* Schimbă cursorul la tipul pointer când treci peste logo */
+}
+
+/* Stiluri pentru elementele de listă din navbar */
+.navbar ul li {
+    list-style: none; /* Elimină marcajele implicite ale listei (buline sau numere) */
+    display: inline-block; /* Afișează elementele de listă pe aceeași linie */
+    margin: 20px; /* Adaugă un spațiu de 20px în jurul fiecărui element de listă */
+}
+
+/* Stiluri pentru linkurile din navbar */
+.navbar ul li a {
+    text-decoration: none; /* Elimină sublinierea implicită a linkurilor */
+    text-transform: uppercase; /* Transformă textul linkurilor în majuscule */
+    color: magenta; /* Setează culoarea textului linkurilor la magenta */
+    font-weight: 600; /* Setează grosimea fontului la 600 (bold) */
+    padding: 10px; /* Adaugă padding de 10px în jurul textului linkurilor */
+    display: inline-block; /* Permite aplicarea de padding și fundal pentru linkuri */
+    border: none; /* Elimină orice bordură aplicată linkurilor */
+    outline: none; /* Elimină conturul implicit care apare la focus sau hover */
+    transition: background-color 0.3s, color 0.3s; /* Aplică o tranziție lină de 0.3 secunde pentru schimbările de culoare și fundal */
+    border-radius: 30px;
+}
+
+/* Stiluri pentru linkurile din navbar la hover */
+.navbar ul li a:hover {
+    background-color: white; /* Schimbă fundalul linkului la alb atunci când este hoverat */
+    color: black; /* Schimbă culoarea textului linkului la negru atunci când este hoverat (opțional) */
+    border: none; /* Asigură-te că nu există borduri la hover */
+    outline: none; /* Elimină conturul la hover */
+    border-radius: 30px;
+}
+
+/* Stiluri pentru secțiunea de conținut */
+.content {
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+/* Stiluri pentru titlul din secțiunea de conținut */
+.content h1 {
+    margin-top: 80px;
+    font-size: 90px;
+    font-weight: 800;
+    color:rgb(224, 224, 224);
+}
+
+/* Stiluri pentru paragrafele din secțiunea de conținut */
+.content p {
+    font-weight: 800;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color:rgb(224, 224, 224);
+}
+
+/* Stiluri pentru butoane */
+button {
+    width: 200px;
+    padding: 15px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 30px;
+    color: black;
+    border: 2px solid; /* Adaugă bordură de 2px */
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Stiluri pentru butoane la hover */
+button:hover {
+    background: magenta;
+    transition: 0.5s;
+    color: white;
+}
+
+/* Media queries pentru dimensiuni de aspect diferite */
+@media (min-aspect-ratio: 16/9) {
+    .banner video {
+        width: 100%;
+        height: auto;
+    }
+}
+

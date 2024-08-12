@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.background {
+    width: 100%;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.navbar {
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 30px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgb(255, 128, 234);
+    color: black;
+    border-radius: 30px;
+}
+
+.logo {
+    width: 180px;
+    margin-top: -10px;
+    margin-left: -90px;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+h1 {
+    color: white; /* Culoare albă pentru text */
+    text-align: center; /* Centrează textul */
+    margin-bottom: 20px; /* Spațiu sub titlu */
+    font-size: 2.5em; /* Dimensiune mai mare pentru text */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-wrapper_POZEM {
+    display: grid;
+    grid-gap: 20px; /* Spațiul dintre imagini */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    padding: 20px; /* Adaugă spațiu în jurul grid-ului */
+}
+
+.grid-wrapper_POZEM > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asigură-te că imaginile nu ies din container */
+}
+
+.grid-wrapper_POZEM > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px; /* Adaugă puțin spațiu între imagini */
+}
+
+.grid-wrapper_POZEM .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper_POZEM .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper_POZEM .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
